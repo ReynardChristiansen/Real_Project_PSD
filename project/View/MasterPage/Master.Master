@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="project.View.MasterPage.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <asp:Panel ID="Panel_Quest" runat="server">
+            <div class="Quest">
+                Quest
+                <asp:Button ID="btn_Quest_Login" runat="server" Text="Login" onClick="btn_Quest_Login_Click"/>
+                <asp:Button ID="btn_Quest_Register" runat="server" Text="Register" onClick="btn_Quest_Register_Click"/>
+                <asp:Button ID="btn_Quest_Home" runat="server" Text="Home" onClick="btn_Quest_Home_Click"/>
+            </div>
+            </asp:Panel>
+
+            <asp:Panel ID="Panel_Customer" runat="server">
+            <div class="Customer">
+                Customer
+                <asp:Button ID="btn_Customer_Home" runat="server" Text="Home" onClick="btn_Customer_Home_Click"/>
+                <asp:Button ID="btn_Customer_Cart" runat="server" Text="Cart" onClick="btn_Customer_Cart_Click"/>
+                <asp:Button ID="btn_Customer_Transaction" runat="server" Text="Transaction" onClick="btn_Customer_Transaction_Click"/>
+                <asp:Button ID="btn_Customer_UpdateProfile" runat="server" Text="UpdateProfile" onClick="btn_Customer_UpdateProfile_Click"/>
+                <asp:Button ID="btn_Customer_Logout" runat="server" Text="Logout" onClick="btn_Customer_Logout_Click"/> 
+            </div>
+            </asp:Panel>
+
+            <asp:Panel ID="Panel_Admin" runat="server">
+            <div class="Admin">
+                Admin
+                <asp:Button ID="btn_Admin_Home" runat="server" Text="Home" onClick="btn_Admin_Home_Click"/>
+                <asp:Button ID="btn_Admin_Transaction" runat="server" Text="Transaction" onClick="btn_Admin_Transaction_Click"/>
+                <asp:Button ID="btn_Admin_UpdateProfile" runat="server" Text="UpdateProfile" onClick="btn_Admin_UpdateProfile_Click"/>
+                <asp:Button ID="btn_Admin_Logout" runat="server" Text="Logout" onClick="btn_Admin_Logout_Click"/>
+            </div>
+            </asp:Panel>
+
+            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
