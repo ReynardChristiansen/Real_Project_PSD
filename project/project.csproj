@@ -114,6 +114,7 @@
     <Content Include="View\Admin\Admin_InsertArtist.aspx" />
     <Content Include="View\Admin\Admin_Logout.aspx" />
     <Content Include="View\Admin\Admin_Transaction.aspx" />
+    <Content Include="View\Admin\Admin_UpdateArtist.aspx" />
     <Content Include="View\Admin\Admin_UpdateProfile.aspx" />
     <Content Include="View\Cust\Cust_Cart.aspx" />
     <Content Include="View\Cust\Cust_Home.aspx" />
@@ -126,6 +127,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ArtistController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\RegisterController.cs" />
     <Compile Include="Factory\AlbumFactory.cs" />
@@ -199,6 +201,13 @@
     </Compile>
     <Compile Include="View\Admin\Admin_Transaction.aspx.designer.cs">
       <DependentUpon>Admin_Transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Admin_UpdateArtist.aspx.cs">
+      <DependentUpon>Admin_UpdateArtist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Admin_UpdateArtist.aspx.designer.cs">
+      <DependentUpon>Admin_UpdateArtist.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Admin\Admin_UpdateProfile.aspx.cs">
       <DependentUpon>Admin_UpdateProfile.aspx</DependentUpon>

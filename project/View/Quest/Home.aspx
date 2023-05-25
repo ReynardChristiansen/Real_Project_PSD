@@ -4,12 +4,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>List of Artist di quest</h1>
 
-
-    <asp:GridView ID="Quest_GridView" runat="server" AutoGenerateColumns="False">
+    <asp:GridView ID="Quest_GridView" runat="server"  AutoGenerateColumns="False">
         <Columns>
+            <asp:BoundField DataField="ArtistID" HeaderText="Artist_ID" SortExpression="ArtistID" />
             <asp:BoundField DataField="ArtistName" HeaderText="Artist_Name" SortExpression="ArtistName" />
-            <asp:BoundField DataField="ArtistImage" HeaderText="Artist_Image" SortExpression="ArtistImage" />
+            <asp:ImageField DataImageUrlField="ArtistImage" ControlStyle-Width="100px" ControlStyle-Height="100px" HeaderText="Artist_Image">
+<ControlStyle Height="100px" Width="100px"></ControlStyle>
+            </asp:ImageField>
+            
         </Columns>
-
     </asp:GridView>
+    
 </asp:Content>

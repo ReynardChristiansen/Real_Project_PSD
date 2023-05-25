@@ -5,11 +5,14 @@
     
     <br />
 
-    <asp:GridView ID="Admin_GridView" runat="server" AutoGenerateColumns="False">
+    <asp:GridView ID="Admin_GridView" runat="server" AutoGenerateColumns="False" OnRowDeleting="Admin_GridView_RowDeleting" OnRowEditing="Admin_GridView_RowEditing">
         <Columns>
+            <asp:BoundField DataField="ArtistID" HeaderText="Artist_ID" SortExpression="ArtistID" />
             <asp:BoundField DataField="ArtistName" HeaderText="Artist_Name" SortExpression="ArtistName" />
-            <asp:ImageField DataImageUrlField="ArtistImage" HeaderText="Artist_Image">
+            <asp:ImageField DataImageUrlField="ArtistImage" ControlStyle-Width="100px" ControlStyle-Height="100px" HeaderText="Artist_Image">
+<ControlStyle Height="100px" Width="100px"></ControlStyle>
             </asp:ImageField>
+            <asp:CommandField ButtonType="Button" HeaderText="Actions" ShowCancelButton="False" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" />
         </Columns>
 
     </asp:GridView>

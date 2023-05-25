@@ -2,6 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <br />
+
     <br />
     <asp:Label ID="lbl_ArtistName" runat="server" Text="Artist Name"></asp:Label>
     <asp:TextBox ID="txt_ArtistName" runat="server"></asp:TextBox>
@@ -9,7 +12,7 @@
     <br />
 
     <asp:Label ID="lbl_ArtistImage" runat="server" Text="Artist Image"></asp:Label>
-    <asp:FileUpload ID="FileUpload1" runat="server" />
+    <asp:FileUpload ID="ImageUpload" runat="server" />
 
     <br />
 

@@ -23,5 +23,17 @@ namespace project.View.Admin
         {
             Response.Redirect("~/View/Admin/Admin_InsertArtist.aspx");
         }
+
+        protected void Admin_GridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            
+        }
+
+        protected void Admin_GridView_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            GridViewRow row = Admin_GridView.Rows[e.NewEditIndex];
+            string id = row.Cells[0].Text.ToString();
+            Response.Redirect("~/View/Admin/Admin_UpdateArtist.aspx?ID="+id);
+        }
     }
 }
