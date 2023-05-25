@@ -15,6 +15,8 @@ namespace project.View.Quest
         protected void Page_Load(object sender, EventArgs e)
         {
             Artists = ArtistRepository.GetArtists();
+            Quest_GridView.DataSource = Artists;
+            Quest_GridView.DataBind();
         }
     }
 }

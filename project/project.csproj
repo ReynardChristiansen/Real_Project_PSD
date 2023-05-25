@@ -79,6 +79,27 @@
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <Content Include="Assets\Album_Artist\638058597622333864.jfif" />
+    <Content Include="Assets\Album_Artist\638058600253472624.jpg" />
+    <Content Include="Assets\Album_Artist\638058602735846856.jpg" />
+    <Content Include="Assets\Album_Artist\638058716701119579.jpg" />
+    <Content Include="Assets\Album_Artist\638058717003784490.jpg" />
+    <Content Include="Assets\Album_Artist\638059437442094314.jfif" />
+    <Content Include="Assets\Album_Artist\638059438205501702.jpg" />
+    <Content Include="Assets\Album_Artist\638059439116596296.jpg" />
+    <Content Include="Assets\Album_Artist\638059439942434092.jfif" />
+    <Content Include="Assets\Album_Artist\638059442482614063.jfif" />
+    <Content Include="Assets\Album_Artist\638059446920356665.jfif" />
+    <Content Include="Assets\Album_Artist\638059447624756394.jfif" />
+    <Content Include="Assets\Album_Artist\638059449025055368.jpg" />
+    <Content Include="Assets\Album_Artist\638059449905363164.jpg" />
+    <Content Include="Assets\Album_Artist\638059451370799986.jfif" />
+    <Content Include="Assets\Image_Artist\638057862770194070.jpeg" />
+    <Content Include="Assets\Image_Artist\638057899497035774.jfif" />
+    <Content Include="Assets\Image_Artist\638057900448119533.jfif" />
+    <Content Include="Assets\Image_Artist\638059446432559006.jfif" />
+    <Content Include="Assets\Image_Artist\638059447901481658.jfif" />
+    <Content Include="Assets\Image_Artist\638059450808002463.jfif" />
     <Content Include="Model\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -90,6 +111,7 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="View\Admin\Admin_Home.aspx" />
+    <Content Include="View\Admin\Admin_InsertArtist.aspx" />
     <Content Include="View\Admin\Admin_Logout.aspx" />
     <Content Include="View\Admin\Admin_Transaction.aspx" />
     <Content Include="View\Admin\Admin_UpdateProfile.aspx" />
@@ -156,6 +178,13 @@
     </Compile>
     <Compile Include="View\Admin\Admin_Home.aspx.designer.cs">
       <DependentUpon>Admin_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Admin_InsertArtist.aspx.cs">
+      <DependentUpon>Admin_InsertArtist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Admin_InsertArtist.aspx.designer.cs">
+      <DependentUpon>Admin_InsertArtist.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Admin\Admin_Logout.aspx.cs">
       <DependentUpon>Admin_Logout.aspx</DependentUpon>

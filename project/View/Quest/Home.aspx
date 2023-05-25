@@ -2,23 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>List of Artist</h1>
-
-    <table style="width:500px" border="1">
-        <tr>
-            <td>Artis Image</td>
-            <td>Artist Name</td>
-        </tr>
-    
-
-    <% foreach(var x in Artists)
-    { %>
-        <tr>
-            <td><%=x.ArtistName%></td>
-        </tr>
-
-    <%}%>
+    <h1>List of Artist di quest</h1>
 
 
-    </table>
+    <asp:GridView ID="Quest_GridView" runat="server" AutoGenerateColumns="False">
+        <Columns>
+            <asp:BoundField DataField="ArtistName" HeaderText="Artist_Name" SortExpression="ArtistName" />
+            <asp:BoundField DataField="ArtistImage" HeaderText="Artist_Image" SortExpression="ArtistImage" />
+        </Columns>
+
+    </asp:GridView>
 </asp:Content>

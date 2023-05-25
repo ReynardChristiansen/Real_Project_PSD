@@ -46,7 +46,20 @@ namespace project.View.Quest
                 }
 
                 AssignSession(u);
-                Response.Redirect("Home.aspx");
+                if(Session["role"].Equals("Cust"))
+                {
+                    Response.Redirect("~/View/Cust/Cust_Home.aspx");
+                }
+                if (Session["role"].Equals("Adm"))
+                {
+                    Response.Redirect("~/View/Admin/Admin_Home.aspx");
+                }
+                else
+                {
+                    Response.Redirect("~/View/Quest/Home.aspx");
+                }
+
+
                 return;
 
             }
