@@ -28,6 +28,7 @@ namespace project.View.Admin
                 {
                     ArtistController.registration(ArtistName, "~/Assets/Image_Artist/" + image.FileName);
                     ImageUpload.SaveAs(Server.MapPath("~/Assets/Image_Artist/" + ImageUpload.FileName));
+                    Response.Redirect("~/View/Admin/Admin_Home.aspx");
                 }
                 else
                 {

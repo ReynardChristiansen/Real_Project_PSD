@@ -59,7 +59,14 @@ namespace project.Controller
 
             return "";
         }
+        
 
+        public static void removeArtist(string id)
+        {
+            int x = Convert.ToInt32(id);
+            Artist xArtist = ArtistRepository.findID(x);
+            ArtistRepository.remove(xArtist);
+        }
 
     }
 }

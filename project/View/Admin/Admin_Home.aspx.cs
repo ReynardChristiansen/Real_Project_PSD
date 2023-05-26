@@ -1,4 +1,5 @@
-﻿using project.Model;
+﻿using project.Controller;
+using project.Model;
 using project.Repositoy;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,12 @@ namespace project.View.Admin
 
         protected void Admin_GridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            
+            GridViewRow row = Admin_GridView.Rows[e.RowIndex];
+            string id = row.Cells[0].Text.ToString();
+
+            ArtistController.removeArtist(id);
+            Response.Redirect("~/View/Admin/Admin_Home.aspx");
+
         }
 
         protected void Admin_GridView_RowEditing(object sender, GridViewEditEventArgs e)
