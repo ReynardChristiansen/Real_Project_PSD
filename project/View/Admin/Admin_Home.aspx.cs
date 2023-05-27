@@ -41,5 +41,12 @@ namespace project.View.Admin
             string id = row.Cells[0].Text.ToString();
             Response.Redirect("~/View/Admin/Admin_UpdateArtist.aspx?ID="+id);
         }
+
+        protected void Admin_GridView_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            GridViewRow row = Admin_GridView.Rows[e.NewSelectedIndex];
+            string id = row.Cells[0].Text.ToString();
+            Response.Redirect("~/View/Admin/Admin_ArtistDetail.aspx?ID=" + id);
+        }
     }
 }

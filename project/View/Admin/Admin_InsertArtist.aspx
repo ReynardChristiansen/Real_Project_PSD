@@ -4,6 +4,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <br />
+    <h3>Insert Artist</h3>
+    <br />
 
     <br />
     <asp:Label ID="lbl_ArtistName" runat="server" Text="Artist Name"></asp:Label>

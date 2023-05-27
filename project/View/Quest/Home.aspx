@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>List of Artist di quest</h1>
+    <h1>List of Artist</h1>
 
     <asp:GridView ID="Quest_GridView" runat="server"  AutoGenerateColumns="False">
         <Columns>

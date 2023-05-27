@@ -4,8 +4,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <br />
+    <h3>List Of Artist</h3>
+    <br />
 
-    <asp:GridView ID="Admin_GridView" runat="server" AutoGenerateColumns="False" OnRowDeleting="Admin_GridView_RowDeleting" OnRowEditing="Admin_GridView_RowEditing">
+    <asp:GridView ID="Admin_GridView" runat="server" AutoGenerateColumns="False" OnRowDeleting="Admin_GridView_RowDeleting" OnRowEditing="Admin_GridView_RowEditing" OnSelectedIndexChanging="Admin_GridView_SelectedIndexChanging">
         <Columns>
             <asp:BoundField DataField="ArtistID" HeaderText="Artist_ID" SortExpression="ArtistID" />
             <asp:BoundField DataField="ArtistName" HeaderText="Artist_Name" SortExpression="ArtistName" />
@@ -13,6 +15,7 @@
 <ControlStyle Height="100px" Width="100px"></ControlStyle>
             </asp:ImageField>
             <asp:CommandField ButtonType="Button" HeaderText="Actions" ShowCancelButton="False" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" />
+            <asp:CommandField ButtonType="Button" HeaderText="Select" ShowHeader="True" ShowSelectButton="True" />
         </Columns>
 
     </asp:GridView>

@@ -33,6 +33,11 @@ namespace project.Repositoy
             return (from x in db.Artists select x).ToList();
         }
 
+        public static List<Artist> GetArtistsDetail(int id)
+        {
+            return (from x in db.Artists where x.ArtistID == id select x).ToList();
+        }
+
         public static int NextID()
         {
             if (db.Artists.Count() == 0)

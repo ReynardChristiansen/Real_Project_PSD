@@ -3,6 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
+    <h3>Update Artist</h3>
+    <br />
     <asp:Label ID="lbl_ArtistName" runat="server" Text="Artist Name"></asp:Label>
     <asp:TextBox ID="txt_ArtistName" runat="server"></asp:TextBox>
 
