@@ -33,6 +33,7 @@ namespace project.View.Admin
         {
             int id = Convert.ToInt32(Request["ID"]);
             Response.Redirect("Admin_InsertAlbum.aspx?ID=" + id);
+
         }
     }
 }

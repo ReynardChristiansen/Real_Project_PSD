@@ -31,7 +31,7 @@
     <br />
 
 
-    <asp:Button ID="Submit" runat="server" Text="Submit" onClick="Submit_Click"/>
+    <asp:Button ID="Submit" runat="server" Text="Submit Album" onClick="Submit_Click"/>
 
 
 </asp:Content>

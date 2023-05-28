@@ -18,6 +18,8 @@ namespace project.View.Admin
 
         protected void Submit_Click(object sender, EventArgs e)
         {
+            Response.Redirect("Admin_Home.aspx");
+
             int id = Convert.ToInt32(Request["ID"]);
             string name = txt_Name.Text;
             string desc = txt_Desc.Text;
@@ -33,7 +35,7 @@ namespace project.View.Admin
             {
                 AlbumController.registration(id, name, desc, price, stock, "~/Assets/Album_Artist/" + image.FileName);
                 ImageUpload.SaveAs(Server.MapPath("~/Assets/Album_Artist/" + ImageUpload.FileName));
-                Response.Redirect("~/View/Admin/Admin_ArtistDetail.aspx");
+                Response.Redirect("Admin_Home.aspx");
             }
             else
             {

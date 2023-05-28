@@ -1,4 +1,5 @@
 ﻿using project.Controller;
+using project.Handler;
 using project.Model;
 using project.Repositoy;
 using System;
@@ -29,10 +30,13 @@ namespace project.View.Admin
         {
             GridViewRow row = Admin_GridView.Rows[e.RowIndex];
             string id = row.Cells[0].Text.ToString();
+            int temp = Convert.ToInt32(id);
+            
+            Handler_Public.delete_Artist_Album(temp);
+            
 
-            ArtistController.removeArtist(id);
+            
             Response.Redirect("~/View/Admin/Admin_Home.aspx");
-
         }
 
         protected void Admin_GridView_RowEditing(object sender, GridViewEditEventArgs e)

@@ -1,4 +1,5 @@
 ﻿using project.Controller;
+using project.Handler;
 using project.Model;
 using project.Repositoy;
 using System;
@@ -41,7 +42,8 @@ namespace project.View.Admin
             {
                 if (temp2 == "")
                 {
-                    ArtistRepository.Update(artists, ArtistName, "~/Assets/Image_Artist/" + image.FileName);
+
+                    ArtistRepository.Update(artists, ArtistName, image);
                     ImageUpload.SaveAs(Server.MapPath("~/Assets/Image_Artist/" + ImageUpload.FileName));
                     Response.Redirect("~/View/Admin/Admin_Home.aspx");
                 }

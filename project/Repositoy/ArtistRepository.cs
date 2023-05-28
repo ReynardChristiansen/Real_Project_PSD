@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace project.Repositoy
 {
@@ -55,15 +56,14 @@ namespace project.Repositoy
             return (from user in db.Artists where user.ArtistID == ArtistIDS select user).FirstOrDefault();
         }
 
-        public static void Update(Artist updatedArtist, string name, string imagePath)
+        public static void Update(Artist updatedArtist, string name, FileUpload imagePath)
         {
             int id = updatedArtist.ArtistID;
 
-            Artist artistToBeUpdated = findID(updatedArtist.ArtistID);
-            remove(artistToBeUpdated);
-
-            Artist artist = ArtistFactory.create(id, name, imagePath);
-            add(artist);
+            updatedArtist.ArtistID = id;
+            updatedArtist.ArtistName = name;
+            updatedArtist.ArtistImage = "~/Assets/Image_Artist/" + imagePath.FileName;
+            save();
         }
 
     }

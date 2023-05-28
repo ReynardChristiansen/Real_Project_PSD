@@ -44,5 +44,26 @@ namespace project.Repositoy
             return db.Albums.Max(x => x.AlbumID) + 1;
         }
 
+        public static List<Album> GetAlbums(int id)
+        {
+            return (from x in db.Albums where x.AlbumID == id select x).ToList();
+        }
+
+        public static List<Album> byArtist(List<Album> x)
+        {
+            return (from x in db.Albums select x).ToList();
+        }
+        public static void deleteAlbums(List<Album> x)
+        {
+            db.Albums.RemoveRange(x);
+            db.SaveChanges();
+        }
+
+        public static void addAlbums(List<Album> x)
+        {
+            db.Albums.AddRange(x);
+            db.SaveChanges();
+        }
+
     }
 }
