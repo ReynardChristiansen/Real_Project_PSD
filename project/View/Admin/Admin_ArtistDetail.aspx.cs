@@ -1,4 +1,5 @@
-﻿using project.Model;
+﻿using project.Controller;
+using project.Model;
 using project.Repositoy;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,23 @@ namespace project.View.Admin
             int id = Convert.ToInt32(Request["ID"]);
             Response.Redirect("Admin_InsertAlbum.aspx?ID=" + id);
 
+        }
+
+        protected void Admin_GridView_Album_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            GridViewRow row = Admin_GridView_Album.Rows[e.RowIndex];
+            string id = row.Cells[0].Text.ToString();
+            int temp = Convert.ToInt32(id);
+
+            AlbumController.deleting(temp);
+            Response.Redirect("~/View/Admin/Admin_ArtistDetail.aspx");
+        }
+
+        protected void Admin_GridView_Album_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            GridViewRow row = Admin_GridView_Album.Rows[e.NewEditIndex];
+            string id = row.Cells[0].Text.ToString();
+            Response.Redirect("~/View/Admin/Admin_UpdateAlbum.aspx?ID=" + id);
         }
     }
 }

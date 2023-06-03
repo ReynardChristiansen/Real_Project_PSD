@@ -11,7 +11,7 @@ namespace project.Controller
     {
         public static string authentication(string CustomerEmail, string CustomerPassword)
         {
-            Customer x = CustomerRepository.find_Email_Password(CustomerEmail, CustomerPassword);
+            Customer x = CustomerRepository.Find_Email_Password(CustomerEmail, CustomerPassword);
 
             if (CustomerEmail.Equals(""))
             {
@@ -32,7 +32,7 @@ namespace project.Controller
 
         public static Customer getUser(string CustomerEmail, string CustomerPassword)
         {
-            Customer user = CustomerRepository.find_Email_Password(CustomerEmail, CustomerPassword);
+            Customer user = CustomerRepository.Find_Email_Password(CustomerEmail, CustomerPassword);
             return user;
         }
     }

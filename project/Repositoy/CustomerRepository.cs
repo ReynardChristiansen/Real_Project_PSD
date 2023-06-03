@@ -8,32 +8,32 @@ namespace project.Repositoy
 {
     public class CustomerRepository
     {
-        static Kpop db = Singleton.getConnection();
+        static Kpop db = Singleton.GetConnection();
 
-        public static void save()
+        public static void Save()
         {
             db.SaveChanges();
         }
 
-        public static void add(Customer x)
+        public static void Add(Customer x)
         {
             db.Customers.Add(x);
             db.SaveChanges();
         }
 
-        public static void remove(Customer x)
+        public static void Remove(Customer x)
         {
             db.Customers.Remove(x);
             db.SaveChanges();
         }
 
 
-        public static Customer findEmail(string email)
+        public static Customer FindEmail(string email)
         {
             return (from user in db.Customers where user.CustomerEmail == email select user).FirstOrDefault();
         }
 
-        public static Customer find_Email_Password(string email, string password)
+        public static Customer Find_Email_Password(string email, string password)
         {
             return (from user in db.Customers where user.CustomerEmail == email && user.CustomerPassword == password select user).FirstOrDefault();
         }

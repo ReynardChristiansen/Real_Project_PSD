@@ -116,6 +116,7 @@
     <Content Include="View\Admin\Admin_InsertArtist.aspx" />
     <Content Include="View\Admin\Admin_Logout.aspx" />
     <Content Include="View\Admin\Admin_Transaction.aspx" />
+    <Content Include="View\Admin\Admin_UpdateAlbum.aspx" />
     <Content Include="View\Admin\Admin_UpdateArtist.aspx" />
     <Content Include="View\Admin\Admin_UpdateProfile.aspx" />
     <Content Include="View\Cust\Cust_Cart.aspx" />
@@ -125,6 +126,7 @@
     <Content Include="View\Cust\Cust_UpdateProfile.aspx" />
     <Content Include="View\Quest\Home.aspx" />
     <Content Include="View\Quest\Login.aspx" />
+    <Content Include="View\Quest\Quest_ArtistDetail.aspx" />
     <Content Include="View\Quest\Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -221,6 +223,13 @@
     <Compile Include="View\Admin\Admin_Transaction.aspx.designer.cs">
       <DependentUpon>Admin_Transaction.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\Admin_UpdateAlbum.aspx.cs">
+      <DependentUpon>Admin_UpdateAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Admin_UpdateAlbum.aspx.designer.cs">
+      <DependentUpon>Admin_UpdateAlbum.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin\Admin_UpdateArtist.aspx.cs">
       <DependentUpon>Admin_UpdateArtist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -290,6 +299,13 @@
     </Compile>
     <Compile Include="View\Quest\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Quest\Quest_ArtistDetail.aspx.cs">
+      <DependentUpon>Quest_ArtistDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Quest\Quest_ArtistDetail.aspx.designer.cs">
+      <DependentUpon>Quest_ArtistDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Quest\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

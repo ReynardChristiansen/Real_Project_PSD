@@ -8,7 +8,7 @@ namespace project.Repositoy
 {
     public class TransactionHeaderRepository
     {
-        static Kpop db = Singleton.getConnection();
+        static Kpop db = Singleton.GetConnection();
 
         public List<TransactionHeader> GetTransactions()
         {

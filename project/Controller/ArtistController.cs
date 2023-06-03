@@ -16,12 +16,12 @@ namespace project.Controller
         {
             int id = ArtistRepository.NextID();
             Artist newArtist = ArtistFactory.create(id, ArtistName, ArtistImage);
-            ArtistRepository.add(newArtist);
+            ArtistRepository.Add(newArtist);
         }
 
         public static string isUnique(string ArtistName)
         {
-            Artist x = ArtistRepository.findName(ArtistName);
+            Artist x = ArtistRepository.FindName(ArtistName);
             if (x != null)
             {
                 return "Artist Name must unique";

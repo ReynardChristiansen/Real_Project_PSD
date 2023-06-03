@@ -18,8 +18,6 @@ namespace project.View.Admin
 
         protected void Submit_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Admin_Home.aspx");
-
             int id = Convert.ToInt32(Request["ID"]);
             string name = txt_Name.Text;
             string desc = txt_Desc.Text;

@@ -14,14 +14,14 @@ namespace project.Controller
         {
             int id = CustomerRepository.NextID();
             Customer newCustomer = CustomerFactory.create(id, CustomerName, CustomerEmail, CustomerPassword, CustomerAddress, CustomerGender, CustomerRole);
-            CustomerRepository.add(newCustomer);
+            CustomerRepository.Add(newCustomer);
         }
 
 
         public static string validation(string CustomerName, string CustomerEmail, String CustomerPassword, string CustomerAddress, string CustomerGender)
         {
             bool isAlphanumeric = CustomerPassword.All(char.IsLetterOrDigit);
-            Customer x = CustomerRepository.findEmail(CustomerEmail);
+            Customer x = CustomerRepository.FindEmail(CustomerEmail);
 
             if ((CustomerName.Length < 5) || (CustomerName.Length > 50))
             {

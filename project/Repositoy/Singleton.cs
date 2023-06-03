@@ -14,7 +14,7 @@ namespace project.Repositoy
 
         }
 
-        public static Kpop getConnection()
+        public static Kpop GetConnection()
         {
             if (db == null)
             {

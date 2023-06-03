@@ -70,7 +70,19 @@ namespace project.Controller
         {
             int id = AlbumRepository.NextID();
             Album newAlbum = AlbumFactory.create(id, id_Artist, name, image, price, stock, desc);
-            AlbumRepository.add(newAlbum);
+            AlbumRepository.Add(newAlbum);
+        }
+
+        public static void deleting(int id)
+        {
+            Album x = AlbumRepository.FindAlbumbyID(id);
+            AlbumRepository.Remove(x);
+        }
+        public static void Update(Album updatedAlbum, string name, string desc, int price,int stock, FileUpload image, int id)
+        {
+
+
+            AlbumRepository.Update(updatedAlbum, name, image, price, stock, desc, id);
         }
 
     }

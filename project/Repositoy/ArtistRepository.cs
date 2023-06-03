@@ -10,20 +10,20 @@ namespace project.Repositoy
 {
     public class ArtistRepository
     {
-        static Kpop db = Singleton.getConnection();
+        static Kpop db = Singleton.GetConnection();
 
-        public static void save()
+        public static void Save()
         {
             db.SaveChanges();
         }
 
-        public static void add(Artist x)
+        public static void Add(Artist x)
         {
             db.Artists.Add(x); 
             db.SaveChanges();
         }
 
-        public static void remove(Artist x)
+        public static void Remove(Artist x)
         {
             db.Artists.Remove(x);
             db.SaveChanges();
@@ -46,12 +46,12 @@ namespace project.Repositoy
             return db.Artists.Max(x => x.ArtistID) + 1;
         }
 
-        public static Artist findName(string ArtistName)
+        public static Artist FindName(string ArtistName)
         {
             return (from user in db.Artists where user.ArtistName == ArtistName select user).FirstOrDefault();
         }
 
-        public static Artist findID(int ArtistIDS)
+        public static Artist FindID(int ArtistIDS)
         {
             return (from user in db.Artists where user.ArtistID == ArtistIDS select user).FirstOrDefault();
         }
@@ -63,7 +63,13 @@ namespace project.Repositoy
             updatedArtist.ArtistID = id;
             updatedArtist.ArtistName = name;
             updatedArtist.ArtistImage = "~/Assets/Image_Artist/" + imagePath.FileName;
-            save();
+            Save();
+        }
+        public static int DeleteArtist(int id)
+        {
+            Artist ct = FindID(id);
+            db.Artists.Remove(ct);
+            return db.SaveChanges();
         }
 
     }

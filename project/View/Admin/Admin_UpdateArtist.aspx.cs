@@ -19,7 +19,7 @@ namespace project.View.Admin
             if (IsPostBack == false)
             {
                 int id = Convert.ToInt32(Request["ID"]);
-                Artist updateArtist = ArtistRepository.findID(id);
+                Artist updateArtist = ArtistRepository.FindID(id);
 
                 txt_ArtistName.Text = updateArtist.ArtistName;
                 ImageTobeUpdated.ImageUrl = updateArtist.ArtistImage;
@@ -36,7 +36,7 @@ namespace project.View.Admin
             FileUpload image = ImageUpload;
             string temp = ArtistController.isUnique(ArtistName);
             string temp2 = ArtistController.IsFileValid(ImageUpload);
-            Artist artists = ArtistRepository.findID(id);
+            Artist artists = ArtistRepository.FindID(id);
 
             if (temp == "")
             {

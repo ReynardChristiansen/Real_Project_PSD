@@ -3,25 +3,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace project.Repositoy
 {
     public class AlbumRepository
     {
-        static Kpop db = Singleton.getConnection();
+        static Kpop db = Singleton.GetConnection();
 
-        public static void save()
+        public static void Save()
         {
             db.SaveChanges();
         }
 
-        public static void add(Album x)
+        public static void Add(Album x)
         {
             db.Albums.Add(x);
             db.SaveChanges();
         }
 
-        public static void remove(Album x)
+        public static void Remove(Album x)
         {
             db.Albums.Remove(x);
             db.SaveChanges();
@@ -49,20 +50,39 @@ namespace project.Repositoy
             return (from x in db.Albums where x.AlbumID == id select x).ToList();
         }
 
-        public static List<Album> byArtist(List<Album> x)
+        public static Album FindAlbumbyID(int id)
+        {
+            return (from x in db.Albums where x.AlbumID == id select x).FirstOrDefault();
+        }
+
+        public static List<Album> ByArtist(List<Album> y)
         {
             return (from x in db.Albums select x).ToList();
         }
-        public static void deleteAlbums(List<Album> x)
+        public static void DeleteAlbums(List<Album> x)
         {
             db.Albums.RemoveRange(x);
             db.SaveChanges();
         }
 
-        public static void addAlbums(List<Album> x)
+        public static void AddAlbums(List<Album> x)
         {
             db.Albums.AddRange(x);
             db.SaveChanges();
+        }
+
+        public static void Update(Album updatedAlbum, string name,FileUpload image,int price,int stock,string description, int id)
+        {
+            int ArtistID = Convert.ToInt32(updatedAlbum.ArtistID);
+
+            updatedAlbum.AlbumID = id;
+            updatedAlbum.ArtistID = ArtistID;
+            updatedAlbum.AlbumName = name;
+            updatedAlbum.AlbumPrice = price;
+            updatedAlbum.AlbumStock = stock;
+            updatedAlbum.AlbumDescription = description;
+            updatedAlbum.AlbumImage = "~/Assets/Image_Artist/" + image.FileName;
+            Save();
         }
 
     }

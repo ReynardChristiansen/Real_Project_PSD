@@ -34,8 +34,6 @@ namespace project.View.Admin
             
             Handler_Public.delete_Artist_Album(temp);
             
-
-            
             Response.Redirect("~/View/Admin/Admin_Home.aspx");
         }
 

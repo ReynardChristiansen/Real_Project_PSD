@@ -18,5 +18,12 @@ namespace project.View.Quest
             Quest_GridView.DataSource = Artists;
             Quest_GridView.DataBind();
         }
+
+        protected void Quest_GridView_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            GridViewRow row = Quest_GridView.Rows[e.NewSelectedIndex];
+            string id = row.Cells[0].Text.ToString();
+            Response.Redirect("~/View/Quest/Quest_ArtistDetail.aspx?ID=" + id);
+        }
     }
 }

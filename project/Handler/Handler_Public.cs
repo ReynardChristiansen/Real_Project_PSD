@@ -13,7 +13,7 @@ namespace project.Handler
     
         public static void delete_Artist_Album(int id)
         {
-            Artist x = ArtistRepository.findID(id);
+            Artist x = ArtistRepository.FindID(id);
 
             if(x == null)
             {
@@ -23,13 +23,9 @@ namespace project.Handler
             {
                 if (x.Albums.Count > 0)
                 {
-                    AlbumRepository.deleteAlbums(x.Albums.ToList());
-                    ArtistRepository.remove(x);
+                    AlbumRepository.DeleteAlbums(x.Albums.ToList());
                 }
-                if (x.Albums.Count == 0)
-                {
-                    ArtistRepository.remove(x);
-                }
+                    ArtistRepository.DeleteArtist(id);
             }
         }
 

@@ -20,8 +20,9 @@
     <h3>List of Album</h3>
     <br />
 
-    <asp:GridView ID="Admin_GridView_Album" runat="server" AutoGenerateColumns="False">
+    <asp:GridView ID="Admin_GridView_Album" runat="server" AutoGenerateColumns="False" OnRowDeleting="Admin_GridView_Album_RowDeleting" OnRowEditing="Admin_GridView_Album_RowEditing">
         <Columns>
+            <asp:BoundField DataField="AlbumID" HeaderText="Album_ID" SortExpression="AlbumName" />
             <asp:ImageField DataImageUrlField="AlbumImage" HeaderText="Album_Image">
                 <ControlStyle Height="100px" Width="100px"></ControlStyle>
             </asp:ImageField>
@@ -29,6 +30,7 @@
             <asp:BoundField DataField="AlbumPrice" HeaderText="Album_Price" SortExpression="AlbumPrice" />
             <asp:BoundField DataField="AlbumStock" HeaderText="Album_Stock" SortExpression="AlbumStock" />
             <asp:BoundField DataField="AlbumDescription" HeaderText="Album_Description" SortExpression="AlbumDescription" />
+            <asp:CommandField ButtonType="Button" HeaderText="Actions" ShowCancelButton="False" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" />
         </Columns>
     </asp:GridView>
 
